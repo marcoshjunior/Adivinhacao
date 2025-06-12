@@ -1,6 +1,13 @@
+:root {
+  --cor1: #5b25b3;
+  --cor2: #8871a2;
+  --cor3: #fceaff;
+  --cor4: #63baaa;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: gold;
+  background-color: var(--cor4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +15,7 @@ body {
 }
 
 .container {
-  background-color: white;
+  background-color: var(--cor3);
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
@@ -28,14 +35,14 @@ button {
   width: 100%;
   padding: 12px;
   font-weight: bold;
-  background-color: blue;
-  border: 2px solid blue;
+  background-color: var(--cor1);
+  border: 2px solid var(--cor1);
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: white;
-  color: blue;
+  background-color: var(--cor3);
+  color: black;
 }
