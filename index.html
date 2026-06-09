@@ -1,18 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adivinhacao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="jogo.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Jogo da Adivinhação</h1>
-      <p>Adivinhe um número de 1 a 100</p>
-      <input type="number" id="guess" />
-      <button onclick="checkGuess()">Enviar número</button>
-      <p id="feedback"></p>
+    <div class="game-wrap">
+      <div class="card">
+        <div class="card-header">
+          <p class="card-title">Jogo da Adivinhação</p>
+          <p class="card-sub">Adivinhe um número de 1 a 100</p>
+        </div>
+        <div class="input-wrap">
+          <input
+            type="number"
+            id="guess"
+            min="1"
+            max="100"
+            aria-label="Seu palpite"
+          />
+        </div>
+        <button class="btn-main" id="btn-send" onclick="checkGuess()">
+          Enviar
+        </button>
+        <div class="feedback" id="feedback" role="alert" aria-live="polite">
+          <i id="feedback-icon"></i>
+          <span id="feedback-text"></span>
+        </div>
+        <button class="btn-restart" id="btn-restart" onclick="restart()">
+          Jogar novamente
+        </button>
+      </div>
     </div>
     <script src="jogo.js"></script>
   </body>
